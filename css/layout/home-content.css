@@ -21,7 +21,6 @@ keep-mobile()
   margin: 0;
 }
 .home-content-container .home-article-list .home-article-item .home-article-content {
-  word-wrap: break-word;
   text-align: justify;
   margin: 20px 0;
   line-height: 2rem;

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <title>
-        Hello World |
+        欧几里得算法和欧几里得拓展算法 |
         
         xun的小破站
     </title>
@@ -153,7 +153,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">Hello World</span>
+            <span class="title-hover-animation">欧几里得算法和欧几里得拓展算法</span>
         </div>
 
         
@@ -169,8 +169,19 @@
                     <div class="meta-info">
                         <div class="article-meta-info">
     <span class="article-date article-meta-item">
-        <i class="fas fa-calendar"></i> 2021-01-15 08:04:36
+        <i class="fas fa-calendar"></i> 2021-01-15 23:28:03
     </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>
+            <ul>
+                
+                    <li>
+                        <a href="/category/%E7%AE%97%E6%B3%95/">算法</a>
+                    </li>
+                
+            </ul>
+        </span>
     
     
 
@@ -186,15 +197,34 @@
         
 
         <div class="article-content markdown-body">
-            <p>Welcome to <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/" >Hexo<i class="fas fa-external-link-alt"></i></a>! This is your very first post. Check <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/" >documentation<i class="fas fa-external-link-alt"></i></a> for more info. If you get any problems when using Hexo, you can find the answer in <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html" >troubleshooting<i class="fas fa-external-link-alt"></i></a> or you can ask me on <a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues" >GitHub<i class="fas fa-external-link-alt"></i></a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html" >Writing<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/server.html" >Server<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html" >Generating<i class="fas fa-external-link-alt"></i></a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html" >Deployment<i class="fas fa-external-link-alt"></i></a></p>
+            <h4 id="一-简介"><a href="#一-简介" class="headerlink" title="一.简介"></a>一.简介</h4><p>欧几里得算法是求两个整数a,b之间的最大公约数</p>
+<p>欧几里得拓展算法在求得两整数a,b之间的最大公约数同时，还能找到整数x,y(其中一个有可能是负数)，满足贝祖等式<br>$$<br>ax+by=gcd(a,b)<br>$$</p>
+<h4 id="二-欧几里得算法"><a href="#二-欧几里得算法" class="headerlink" title="二.欧几里得算法"></a>二.欧几里得算法</h4><p>​     欧几里得算法也叫辗转相除法，具体步骤详解和证明可以参见<a class="link"   target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%BC%BE%E8%BD%89%E7%9B%B8%E9%99%A4%E6%B3%95" >欧几里得算法<i class="fas fa-external-link-alt"></i></a>，在此举个例子介绍一下算法步骤。</p>
+<p>​      求25和15的最大公约数：</p>
+<p>​<br>$$<br>25/15=1……10<br>$$</p>
+<p>$$<br>15/10=1……5<br>$$</p>
+<p>$$<br>15/5=3……0<br>$$</p>
+<p>​      由此，得出25和15的最大公约数是5</p>
+<p>​      C++代码实现如下：       </p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a,b,t=<span class="number">1</span>;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</span><br><span class="line">    <span class="keyword">while</span>(t!=<span class="number">0</span>)&#123;</span><br><span class="line">        t=a%b;</span><br><span class="line">        a=b;</span><br><span class="line">        b=t;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;a;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> python代码实现如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">gcd</span>(<span class="params">a,b</span>):</span></span><br><span class="line">    <span class="keyword">while</span>(b!=<span class="number">0</span>):</span><br><span class="line">      t=a%b</span><br><span class="line">      a=b</span><br><span class="line">      b=t</span><br><span class="line">     <span class="keyword">return</span> a</span><br></pre></td></tr></table></figure>
+
+
+<h4 id="二-扩展欧几里得算法"><a href="#二-扩展欧几里得算法" class="headerlink" title="二.扩展欧几里得算法"></a>二.扩展欧几里得算法</h4><p>​        扩展欧几里得算法在得到   最大公约数的同时，还可以求得x,y使其满足<a class="link"   target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%B2%9D%E7%A5%96%E7%AD%89%E5%BC%8F" >贝祖等式<i class="fas fa-external-link-alt"></i></a>。即出下列式中满足条件的x,y。</p>
+<p>$$<br>ax+by=gcd(a,b)<br>$$<br>我们知道了一定存在 x 和 y 使得 ：<br>$$<br>ax + by = gcd ，<br>$$<br> 那么，怎么求出这个特解 x 和 y 呢？只需要在欧几里德算法的基础上加点改动就行了。</p>
+<p> 我们观察到：欧几里德算法停止的状态是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a&#x3D; gcd ， b &#x3D; 0 ，</span><br></pre></td></tr></table></figure>
+<p>那么，这是否能给我们求解 x y 提供一种思路呢？因为，这时候，只要 a = gcd 的系数是 1 ，那么只要 b 的系数是 0 或者其他值（无所谓是多少，反正任何数乘以 0 都等于 0 但是a 的系数一定要是 1），这时，我们就会有：<br>$$<br>a<em>1 + b</em>0 = gcd<br>$$<br> 当然这是最终状态，但是我们是否可以从最终状态反推到最初的状态呢？</p>
+<p>  假设当前我们要处理的是求出 a 和 b的最大公约数，并求出 x 和 y 使得<br>$$<br>a<em>x + b</em>y= gcd<br>$$<br>而我们已经求出了下一个状态：b 和 a%b 的最大公约数，并且求出了一组x1 和y1 使得：</p>
+<p>$$<br>b*x1+(a%b)*y1=gcd<br>$$ {c}<br> 那么这两个相邻的状态之间是否存在一种关系呢？</p>
+<p> 我们知道：<br>$$<br>a%b = a - (a/b)<em>b<br>$$<br>那么，我们可以进一步得到：<br>$$<br> gcd = b</em>x1 + (a-(a/b)*b)*y1</p>
+<pre><code>        = b*x1 + a*y1 – (a/b)*b*y1
+
+        = a*y1 + b*(x1 – a/b*y1)</code></pre>
+<p>$$<br>对比之前我们的状态：求一组 x 和 y 使得：a<em>x + b</em>y = gcd ，这里：<br>$$<br>x = y1，y = x1 – a/b*y1<br>$$</p>
+<p>C++代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">exgcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> &amp;x,<span class="keyword">int</span> &amp;y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(b==<span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        x=<span class="number">1</span>;y=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> a;  <span class="comment">//到达递归边界开始向上一层返回</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> r=exgcd(b,a%b,x,y);</span><br><span class="line">    <span class="keyword">int</span> temp=y;    <span class="comment">//把x y变成上一层的</span></span><br><span class="line">    y=x-(a/b)*y;</span><br><span class="line">    x=temp;</span><br><span class="line">    <span class="keyword">return</span> r;     <span class="comment">//得到a b的最大公因数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         </div>
 
@@ -202,11 +232,11 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>本文标题：Hello World</li>
+        <li>本文标题：欧几里得算法和欧几里得拓展算法</li>
         <li>本文作者：starkxun</li>
-        <li>创建时间：2021-01-15 08:04:36</li>
+        <li>创建时间：2021-01-15 23:28:03</li>
         <li>
-            本文链接：https://keep.xpoet.cn/2021/01/15/hello-world/
+            本文链接：https://keep.xpoet.cn/2021/01/15/欧几里得算法/
         </li>
         <li>
             版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -223,18 +253,33 @@
                     <div class="article-prev">
                         <a class="prev"
                            rel="prev"
-                           href="/2021/01/15/misc%E5%9F%BA%E7%A1%80%E9%A2%98%E7%9A%84%E4%B8%80%E7%82%B9%E5%9B%9E%E9%A1%BE/"
+                           href="/2021/01/15/%E7%99%BD%E5%B1%85%E6%98%93/"
                         >
                             <span class="left arrow-icon flex-center" >
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">刷完misc基础题的一点回顾</span>
+                                <span class="post-nav-title-item">白居易</span>
                                 <span class="post-nav-item">上一篇</span>
                             </span>
                         </a>
                     </div>
                 
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/01/15/%E5%A4%A7%E4%B8%80%E4%B8%8A%E5%AD%A6%E6%9C%9F%E7%9A%84%E4%B8%80%E7%82%B9%E5%9B%9E%E9%A1%BE/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">大一上学期的一点回顾</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center" >
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
                 
             </div>
         
@@ -387,7 +432,7 @@
         
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80-%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">一.简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C-%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">二.欧几里得算法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C-%E6%89%A9%E5%B1%95%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">二.扩展欧几里得算法</span></a></li></ol>
     </div>
 </div>
         

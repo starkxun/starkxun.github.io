@@ -1,47 +1,46 @@
 .page-container {
   position: relative;
+  padding-top: 2.8px;
 keep-tablet()
 }
-.page-container .page-main-content {
+.page-container .page-header .header-progress {
+  visibility: hidden;
+  position: fixed;
+  width: 0;
+  height: 2.8px;
+  top: 0;
+  left: 0;
+  background: var(--primary-color);
+  transition: all 0.1s ease;
+  z-index: $z-index-7;
+}
+.page-container .page-main .page-main-content {
   padding-top: $header-height;
   position: relative;
 keep-tablet()
 keep-mobile()
 }
-.header-shrink .page-container .page-main-content {
-  padding-top: $header-shrink-height;
-keep-tablet()
-keep-mobile()
-}
-.page-container .page-main-content .page-main-content-top {
+.page-container .page-main .page-main-content .page-main-content-top {
   position: fixed;
   top: 0;
   right: 0;
   width: 100%;
   height: $header-height;
+keep-tablet()
+keep-mobile()
   z-index: $z-index-5;
   box-sizing: border-box;
-keep-tablet()
-keep-mobile()
 }
-.page-container .page-main-content .page-main-content-top.hide {
-  transform: translateY(-102%);
-}
-.header-shrink .page-container .page-main-content .page-main-content-top {
-  height: $header-shrink-height;
-keep-tablet()
-keep-mobile()
-}
-.page-container .page-main-content .page-main-content-middle {
+.page-container .page-main .page-main-content .page-main-content-middle {
   box-sizing: border-box;
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: $component-spacing-value 0;
+  padding: $component-interspace 0;
 keep-tablet()
 keep-mobile()
 }
-.page-container .page-main-content .page-main-content-middle .main-content {
+.page-container .page-main .page-main-content .page-main-content-middle .main-content {
   position: relative;
   box-sizing: border-box;
   width: $main-content-width;
@@ -50,8 +49,14 @@ keep-mobile()
 keep-tablet()
 keep-mobile()
 }
-.page-container .page-main-content .page-main-content-bottom {
+.page-container .page-main .page-main-content .page-main-content-bottom {
   width: 100%;
+}
+.page-container .page-main .page-main-content-top-shrink {
+  padding-top: $header-shrink-height;
+}
+.page-container .page-main .page-main-content-top-shrink .page-main-content-top {
+  height: $header-shrink-height;
 }
 .page-container .page-aside {
   position: fixed;
@@ -65,20 +70,15 @@ keep-mobile()
   border-radius: 0 !important;
 keep-tablet()
 }
-.page-container .post-tools {
+.page-container .sidebar-tools {
   position: fixed;
-  top: $header-height$component-spacing-value;
-  right: $component-spacing-value;
-keep-tablet()
-keep-mobile()
-}
-.header-shrink .page-container .post-tools {
-  top: $header-shrink-height$component-spacing-value;
+  top: $header-height$component-interspace;
+  right: $component-interspace;
 keep-tablet()
 keep-mobile()
 }
 .page-container .right-bottom-side-tools {
   position: fixed;
-  bottom: 5%;
+  bottom: $component-interspace;
   right: 0;
 }

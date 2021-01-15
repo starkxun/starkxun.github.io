@@ -1,4 +1,5 @@
-KEEP.initLocalSearch = () => {
+/* global CONFIG */
+window.addEventListener('DOMContentLoaded', () => {
 
   // Search DB path
   let searchPath = KEEP.hexo_config.path;
@@ -17,8 +18,23 @@ KEEP.initLocalSearch = () => {
   } else if (searchPath.endsWith('json')) {
     isXml = false;
   }
-  const searchInputDom = document.querySelector('.search-input');
+  const input = document.querySelector('.search-input');
   const resultContent = document.getElementById('search-result');
+
+  // Ref: https://github.com/ForbesLindesay/unescape-html
+  const unescapeHtml = html => {
+    return String(html)
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, '\'')
+      .replace(/&#x3A;/g, ':')
+      // Replace all the other &#x; chars
+      .replace(/&#(\d+);/g, (m, p) => {
+        return String.fromCharCode(p);
+      })
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&amp;/g, '&');
+  };
 
   const getIndexByWord = (word, text, caseSensitive) => {
     let wordLen = word.length;
@@ -90,7 +106,7 @@ KEEP.initLocalSearch = () => {
 
   const inputEventFunction = () => {
     if (!isfetched) return;
-    let searchText = searchInputDom.value.trim().toLowerCase();
+    let searchText = input.value.trim().toLowerCase();
     let keywords = searchText.split(/[-\s]+/);
     if (keywords.length > 1) {
       keywords.push(searchText);
@@ -228,12 +244,14 @@ KEEP.initLocalSearch = () => {
         datas = datas.filter(data => data.title).map(data => {
           data.title = data.title.trim();
           data.content = data.content ? data.content.trim().replace(/<[^>]+>/g, '') : '';
+          if (KEEP.theme_config.local_search.unescape) {
+            data.content = unescapeHtml(data.content);
+          }
           data.url = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
           return data;
         });
         // Remove loading animation
-        const noResultDom = document.querySelector('#no-result');
-        noResultDom && (noResultDom.innerHTML = '<i class="fas fa-search fa-5x"></i>');
+        document.getElementById('no-result').innerHTML = '<i class="fas fa-search fa-5x"></i>';
       });
   };
 
@@ -241,16 +259,26 @@ KEEP.initLocalSearch = () => {
     fetchData();
   }
 
-  if (searchInputDom) {
-    searchInputDom.addEventListener('input', inputEventFunction);
+  if (KEEP.theme_config.local_search.trigger === 'auto') {
+    if (input) {
+      input.addEventListener('input', inputEventFunction);
+    }
+
+  } else {
+    document.querySelector('.search-icon').addEventListener('click', inputEventFunction);
+    input.addEventListener('keypress', event => {
+      if (event.key === 'Enter') {
+        inputEventFunction();
+      }
+    });
   }
 
   // Handle and trigger popup window
-  document.querySelectorAll('.search-popup-trigger').forEach(element => {
+  document.querySelectorAll('.popup-trigger').forEach(element => {
     element.addEventListener('click', () => {
       document.body.style.overflow = 'hidden';
-      document.querySelector('.search-pop-overlay').classList.add('active');
-      setTimeout(() => searchInputDom.focus(), 500);
+      document.querySelector('.search-pop-overlay').style.display = 'block';
+      input.focus();
       if (!isfetched) fetchData();
     });
   });
@@ -258,18 +286,13 @@ KEEP.initLocalSearch = () => {
   // Monitor main search box
   const onPopupClose = () => {
     document.body.style.overflow = '';
-    document.querySelector('.search-pop-overlay').classList.remove('active');
+    document.querySelector('.search-pop-overlay').style.display = '';
   };
 
   document.querySelector('.search-pop-overlay').addEventListener('click', event => {
     if (event.target === document.querySelector('.search-pop-overlay')) {
       onPopupClose();
     }
-  });
-  document.querySelector('.search-input-field-pre').addEventListener('click', () => {
-    searchInputDom.value = '';
-    searchInputDom.focus();
-    inputEventFunction();
   });
   document.querySelector('.popup-btn-close').addEventListener('click', onPopupClose);
   window.addEventListener('pjax:success', onPopupClose);
@@ -278,5 +301,4 @@ KEEP.initLocalSearch = () => {
       onPopupClose();
     }
   });
-
-}
+});
