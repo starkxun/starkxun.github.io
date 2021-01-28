@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <title>
-        归档 |
+        pycharm安装gmpy2 |
         
         xun的小破站
     </title>
@@ -55,7 +55,7 @@
                 </li>
             
                 <li class="menu-item">
-                    <a class="active"
+                    <a class=""
                        href="/archives"
                     >
                         归档
@@ -110,7 +110,7 @@
                 </li>
             
                 <li class="drawer-menu-item flex-center">
-                    <a class="active"
+                    <a class=""
                        href="/archives">归档</a>
                 </li>
             
@@ -150,87 +150,170 @@
 
                     
                         <div class="fade-in-down-animation">
-    <div class="archive-container ">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">pycharm安装gmpy2</span>
+        </div>
+
         
-<div class="archive-list-container">
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span>starkxun</span>
+                        <span class="level">Lv1</span>
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-calendar"></i> 2021-01-28 15:59:32
+    </span>
     
-        <section class="archive-item">
-            <div class="archive-item-header">
-                <span class="archive-year">2021</span>
-                <span class="archive-year-post-count">(9)</span>
-            </div>
-            <ul class="article-list">
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>
+            <ul>
                 
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2021/01/28/pycharm%E5%AE%89%E8%A3%85gmpy2/"
-                        >pycharm安装gmpy2</a>
-                        <span class="article-date">01-28</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2021/01/27/cout%E8%BE%93%E5%87%BA%E4%BF%9D%E7%95%99%E5%9B%BA%E5%AE%9A%E5%B0%8F%E6%95%B0%E4%BD%8D/"
-                        >cout输出保留固定小数位</a>
-                        <span class="article-date">01-27</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2021/01/20/python%E5%9F%BA%E7%A1%80/"
-                        >python基础学习</a>
-                        <span class="article-date">01-20</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2021/01/15/cad%E7%9A%84%E5%AE%8C%E5%85%A8%E5%88%A0%E9%99%A4%E6%96%B9%E5%BC%8F/"
-                        >CAD的完全删除方式</a>
-                        <span class="article-date">01-15</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2021/01/15/misc%E5%9F%BA%E7%A1%80%E9%A2%98%E7%9A%84%E4%B8%80%E7%82%B9%E5%9B%9E%E9%A1%BE/"
-                        >刷完misc基础题的一点回顾</a>
-                        <span class="article-date">01-15</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2021/01/15/%E5%A4%A7%E4%B8%80%E4%B8%8A%E5%AD%A6%E6%9C%9F%E7%9A%84%E4%B8%80%E7%82%B9%E5%9B%9E%E9%A1%BE/"
-                        >大一上学期的一点回顾</a>
-                        <span class="article-date">01-15</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2021/01/15/stegsolve%E7%9A%84%E4%BD%BF%E7%94%A8/"
-                        >Stegsolve的使用</a>
-                        <span class="article-date">01-15</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2021/01/15/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E7%AE%97%E6%B3%95/"
-                        >欧几里得算法和欧几里得拓展算法</a>
-                        <span class="article-date">01-15</span>
-                    </li>
-                
-                    <li class="article-item">
-                        <a class="article-title"
-                           href="/2021/01/15/%E7%99%BD%E5%B1%85%E6%98%93/"
-                        >白居易</a>
-                        <span class="article-date">01-15</span>
+                    <li>
+                        <a href="/category/python/">python</a>
                     </li>
                 
             </ul>
-        </section>
+        </span>
+    
+    
+
+    
+    
+    
     
 </div>
 
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>​        今天再写攻防世界里的题目，是关于一道rsa密钥的，最后解出答案需要用到python，但运行时报错，查了一下，原因是没有安装库gmpy2,导致import gmpy2报错。</p>
+<p>​      试了网上好多的方法，包括安装了其他版本的python使其和pip的版本对应，因为报错里的内容就是这么写的：</p>
+<p><img src="https://s3.ax1x.com/2021/01/28/y9ZGgf.png"></p>
+<p>大致意思就是python和pip的版本不对应，但我换了其他版本的python之后再pycharm里面安装gmpy2依然失败，遂继续寻找其他的解决方法。下面是正解：</p>
+<p>打开pycharm，依次选择：Files -&gt; Setting -&gt; Project -&gt; python Interpreter</p>
+<p><img src="https://s3.ax1x.com/2021/01/28/y9eWy8.png"></p>
+<p>上图中箭头所指向的位置就是python的位置。先记住等会用的上。现在从下面的网站下载whell</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;s3.ax1x.com&#x2F;2021&#x2F;01&#x2F;28&#x2F;y9eWy8.png</span><br></pre></td></tr></table></figure>
+<p>在该网站使用Ctrl+F搜索gmpy2即可直接搜索到。需要注意：</p>
+<p>cp27代表2.7版本</p>
+<p>cp36代表3.6版本</p>
+<p>amd64代表64位</p>
+<p>win32代表32位</p>
+<p>下载好后，将文件复制到上面提到的目录的Scripts文件夹里，然后打开终端，输入命令，格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install +刚才将文件复制进去的目录+\文件名</span><br></pre></td></tr></table></figure>
+<p>等待安装完成，出现Successfully就表示安装完成了。</p>
+<p>现在重现打开pycharm，继续找到上图的位置，就会出现一个gmpy2的包了，如果没有，换一下其他的编辑器在换回来，会自动刷新，此时gmpy2就显示出来了。而import gmpy2也不会再报错了。</p>
+<p>参考链接：<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42263820/article/details/108225602" >https://blog.csdn.net/qq_42263820/article/details/108225602<i class="fas fa-external-link-alt"></i></a></p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：pycharm安装gmpy2</li>
+        <li>本文作者：starkxun</li>
+        <li>创建时间：2021-01-28 15:59:32</li>
+        <li>
+            本文链接：https://keep.xpoet.cn/2021/01/28/pycharm安装gmpy2/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/01/27/cout%E8%BE%93%E5%87%BA%E4%BF%9D%E7%95%99%E5%9B%BA%E5%AE%9A%E5%B0%8F%E6%95%B0%E4%BD%8D/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">cout输出保留固定小数位</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center" >
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    
+        
+    <div class="valine-container">
+        <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+        <div id="vcomments"></div>
+        <script>
+            new Valine({
+                el: '#vcomments',
+                appId: 'jpKUeuyo7pSVaHLw7Jf9YVsO-gzGzoHsz',
+                appKey: 'NQNBMAvso3J9VIAiz0Xawtc1',
+                meta: ''.split(','),
+                avatar: 'wavatar',
+                enableQQ: true,
+                placeholder: '',
+                lang: 'zh-CN'.toLowerCase()
+            });
+
+
+            // Valine 评论列表增加"博主"标识
+            const getValineDomTimer = setInterval(() => {
+                const vcards = document.querySelectorAll('#vcomments .vcards .vcard');
+                if (vcards.length > 0) {
+
+                    let author = 'starkxun';
+                    if (author) {
+                        author = author.toLocaleLowerCase();
+                    }
+
+                    for (let vcard of vcards) {
+                        const vnick = vcard.querySelector('.vhead .vnick');
+                        if (vnick.innerHTML.toLocaleLowerCase() === author) {
+                            vcard.classList.add('author');
+                        }
+                    }
+                    clearInterval(getValineDomTimer);
+                } else {
+                    clearInterval(getValineDomTimer);
+                }
+            }, 2000);
+        </script>
+    </div>
+
+
+    
+</div>
+
+            </div>
+        
     </div>
 </div>
+
 
                     
                 </main>
@@ -268,8 +351,16 @@
         
 
         
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
 
         <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
         
 
     </ul>
@@ -322,6 +413,12 @@
     <!-- page aside -->
     <aside class="page-aside">
         
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        
+    </div>
+</div>
+        
     </aside>
 
     <!-- image viewer -->
@@ -372,6 +469,17 @@
     <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/local-search.js"></script>
 
 
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/left-side-toggle.js"></script>
+
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/code-copy.js"></script>
+    
+
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/toc.js"></script>
+    
 
 
 </body>
