@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-02-14T02:29:23.010Z</updated>
+  <updated>2021-02-15T08:23:01.320Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,49 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ubuntu配置v2ray</title>
+    <link href="http://example.com/2021/02/15/Ubuntu%E9%85%8D%E7%BD%AEv2ray/"/>
+    <id>http://example.com/2021/02/15/Ubuntu%E9%85%8D%E7%BD%AEv2ray/</id>
+    <published>2021-02-15T08:08:20.411Z</published>
+    <updated>2021-02-15T08:23:01.320Z</updated>
+    
+    <content type="html"><![CDATA[<p>这是一件非常值得记录的事，关于V2ray在Ubuntu的配置，百度知乎我都找了好久，没有结果，问题始终的不到结果。要知道Ubuntu连不上Google，那还折腾个屁啊。我还想这把Ubuntu的桌面改成Mac呢。OK，正题。</p><p>关于使用终端在Ubuntu上干的，我试了，没有一个能行，这是我前在晚上找的用终端安装，失败，不是说博主的问题，可能是我的机器配置有些问题，有兴趣的朋友还是值得试试的。</p><p><img src="https://s3.ax1x.com/2021/02/15/y6lVfI.jpg"></p><p>现在介绍一种跟直接的方法，直接下载文件，操作还是比较图形化的（youtube上看到的）。下载下面两个文件：</p><p><a class="link"   href="https://github.com/v2fly/v2ray-core/releases/download/v4.31.0/v2ray-linux-64.zip" >小可爱<i class="fas fa-external-link-alt"></i></a></p><p><a class="link"   href="https://github.com/Qv2ray/Qv2ray/releases/download/v2.6.3/Qv2ray.v2.6.3.linux-x64.AppImage" >大可爱<i class="fas fa-external-link-alt"></i></a></p><p>下载之后，在Ubuntu的根目录下创建一个V2ray的文件夹，将刚才下载的两个文件复制进去，并将第一个压缩文件解压。大概得到这些文件</p><p><img src="https://s3.ax1x.com/2021/02/15/y6lzNj.jpg"></p><p>这时，选中文件Qv2ray2.6.3.linux-x64.AppImage，先不要急着打开，右键选择属性，更改权限允许文件作为程序执行，如下图</p><p><img src="https://s3.ax1x.com/2021/02/15/y61kuT.jpg"></p><p>现在关掉窗口，重新打开文件即可，此时已经显示窗口，简单配置一下就好了。点击左上方的首选项，打开后选择内核设置</p><p><img src="https://s3.ax1x.com/2021/02/15/y61EbF.jpg"></p><p><img src="https://s3.ax1x.com/2021/02/15/y61eUJ.jpg"></p><p>V2Ray核心可执行路径选择之前创建的V2ray文件夹下解压的小v2ray文件，V2Ray资源目录选择之前创建的V2ray文件夹，然后点击检查V2Ray核心设，成功的话会有一个绿色的小钩钩，失败的话会出现叉号，检查重试一遍。点击ok保存。</p><p>现在添加自己的订阅就可以使用了。快试试吧。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;这是一件非常值得记录的事，关于V2ray在Ubuntu的配置，百度知乎我都找了好久，没有结果，问题始终的不到结果。要知道Ubuntu连不上Google，那还折腾个屁啊。我还想这把Ubuntu的桌面改成Mac呢。OK，正题。&lt;/p&gt;
+&lt;p&gt;关于使用终端在Ubuntu上干的，我</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android开发基础知识</title>
+    <link href="http://example.com/2021/02/15/Android%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <id>http://example.com/2021/02/15/Android%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
+    <published>2021-02-15T08:00:41.661Z</published>
+    <updated>2021-02-15T08:55:41.200Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一-开发环境配置"><a href="#一-开发环境配置" class="headerlink" title="一.开发环境配置"></a>一.开发环境配置</h3><p>​        工欲善其事必先利其器，搞安卓开发得先把Android studio安装好，但这玩意在国内安装的时候总是有一堆毛病，不解决的话，后面的路也不好走。所以先介绍安装Android studio的方法和一些问题的解决方法。</p><ol><li><p>首先要有科学上网，这个是开发人员的标配，如果没有解决的活可以参考我的另一篇文章。不做过多介绍。</p><ol start="2"><li><p>谷歌搜索Android studio，进入官网下载（注意不要用百度搜，那样是搜索不到官网并下载最新版的）。</p></li><li><p>下载并安装，注意安装过程中全局代理要一直打开，确保所有需要的文件都能够下载完成。</p></li><li><p>安装完成后，新建空白项目，进入开发界面。选择File-&gt;Setting，在搜索栏搜索proxy，设置代理，配置如下：<img src="https://s3.ax1x.com/2021/02/15/y61xsK.png">端口具体数字可以查看v2ray配置。填好后，点击Check connection,输入<a class="link"   href="https://www.google.cn查看是否配置成功,成功的话会提示successfully./" >https://www.google.cn查看是否配置成功，成功的话会提示Successfully。<i class="fas fa-external-link-alt"></i></a></p></li><li><p>本地代理文件配置，修改gradle.properties文件，默认位置是：C:/Users/yourname/.gradle。用编辑器打开将http后面加s的都注释掉，如下：<img src="https://s3.ax1x.com/2021/02/15/y63fFH.png">把红色方框圈起来的内容注释掉保存退出就好了（注释方法直接在代码前面加一个#号）。</p></li><li><p>重启Android studio，点击下图箭头所指的搜索按钮，并输入sync,回车等待同步完成<img src="https://s3.ax1x.com/2021/02/15/y63KoQ.png"></p><p>至此，Android studio安装完成。</p></li></ol></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;一-开发环境配置&quot;&gt;&lt;a href=&quot;#一-开发环境配置&quot; class=&quot;headerlink&quot; title=&quot;一.开发环境配置&quot;&gt;&lt;/a&gt;一.开发环境配置&lt;/h3&gt;&lt;p&gt;​        工欲善其事必先利其器，搞安卓开发得先把Android studio安装好，</summary>
+      
+    
+    
+    
+    <category term="Android开发" scheme="http://example.com/category/Android%E5%BC%80%E5%8F%91/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>老屋回忆</title>
