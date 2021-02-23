@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <title>
+        python基础学习 |
+        
+        xun的小破站
+    </title>
+    <link rel="shortcut icon" href="/images/bitbug_favicon.ico">
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/css/font-awesome.min.css">
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.jpg","favicon":"/images/bitbug_favicon.ico","img_position":"left","left_side_width":"260px","content_max_width":"900px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"即使没有人为你鼓掌，也要优雅的谢幕，感谢自己的认真付出，我叫xun"}},"local_search":{"enable":true,"trigger":"auto","unescape":false,"preload":true},"version":"3.0.4"};
+    KEEP.language = {"search":"搜索...","prev":"上一页","next":"下一页","prev_posts":"上一篇","next_posts":"下一篇","page":"第 %d 页","recent_posts":"最新文章","share":"分享","powered_by":"由 %s 驱动","theme":"主题","rss_feed":"RSS Feed","category":"分类","categories":"分类","tag":"标签","tags":"标签","tagcloud":"标签云","comment":"评论","home":"首页","archive":"归档","archives":"归档","about":"关于","site_uv":"访问人数","site_pv":"总访问量","links":"友链","link":"友链","top":"顶置","read_more":"阅读全文","wordcount":"字","min2read":"分钟","changelog":"更新日志","copyright":{"title":"本文标题","author":"本文作者","link":"本文链接","create_time":"创建时间","license_title":"版权声明","license_content":"本博客所有文章除特别声明外，均采用 %s 许可协议。转载请注明出处！"},"ago":{"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"}};
+  </script>
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="逊的小破站" type="application/atom+xml">
+</head>
+
+
+<body>
+<div class="page-container">
+
+    
+
+    <header class="page-header">
+        <div class="header-progress"></div>
+    </header>
+
+    <main class="page-main">
+
+        <div class="page-main-content">
+
+            <div class="page-main-content-top">
+                <header class="header-wrapper">
+
+    <div class="header-content">
+        <a class="logo-title" href="/">
+            xun的小破站
+        </a>
+
+        <ul class="menu-list">
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/"
+                    >
+                        首页
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/archives"
+                    >
+                        归档
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/category"
+                    >
+                        分类
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/tags"
+                    >
+                        标签
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/links"
+                    >
+                        友链
+                    </a>
+                </li>
+            
+                <li class="menu-item">
+                    <a class=""
+                       href="/about"
+                    >
+                        关于
+                    </a>
+                </li>
+            
+        </ul>
+
+        <div class="menu-bar">
+            <div class="menu-bar-middle"></div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/category">分类</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/links">友链</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/about">关于</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+            </div>
+
+            <div class="page-main-content-middle">
+
+                <main class="main-content normal-code-theme">
+
+                    
+                        <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">python基础学习</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span>starkxun</span>
+                        <span class="level">Lv2</span>
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-calendar"></i> 2021-02-22 17:53:32
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>
+            <ul>
+                
+                    <li>
+                        <a href="/category/Python/">Python</a>
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h4 id="一-python程序基本结构："><a href="#一-python程序基本结构：" class="headerlink" title="一.python程序基本结构："></a>一.python程序基本结构：</h4><h5 id="1-基本输出"><a href="#1-基本输出" class="headerlink" title="1.基本输出"></a>1.基本输出</h5><p>​    python的编写比较简单，不需要像C++一样事先声明头文件、环境空间，直接用print就可以了。例如，直接在编辑器里写：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&quot;helloworld&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>写完直接运行就会得到输出。</p>
+<h5 id="2-缩进"><a href="#2-缩进" class="headerlink" title="2.缩进"></a>2.缩进</h5><p>​    与C++等语言不同，C++用花括号表示代码块，而python用缩进表示代码块，可以对比一下：</p>
+<p>这是C++：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt; </span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> n=<span class="number">10</span>;</span><br><span class="line"><span class="keyword">if</span>(n&gt;<span class="number">10</span>)&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;The value is not legal&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;The value is legal&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这是python：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="number">10</span></span><br><span class="line"><span class="keyword">if</span> x&gt;<span class="number">10</span>:</span><br><span class="line"> print(<span class="string">&quot;The value is not legal&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line"> print(<span class="string">&quot;The value is legal&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>python要注意同级代码块缩进梁应保持相同，不然可能会报错或者得不到正确的结果。</p>
+<h5 id="3-注释"><a href="#3-注释" class="headerlink" title="3.注释"></a>3.注释</h5><p>​     python有两种注释方法，单行注释和段落注释。单行注释可以用#，然后直接在后面写注释就可以了，而段落注释则可以用三个单引号’’’或者三个双引号”””来表示。看代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">这是我的第一个python程序</span></span><br><span class="line"><span class="string">好高兴呀</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#这是我的第一个python程序，好高兴呀</span></span><br><span class="line"></span><br><span class="line">x=<span class="number">10</span></span><br><span class="line"><span class="keyword">if</span> x&gt;<span class="number">10</span>:</span><br><span class="line"> print(<span class="string">&quot;The value is not legal&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line"> print(<span class="string">&quot;The value is legal&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h5 id="4-语句续行"><a href="#4-语句续行" class="headerlink" title="4.语句续行"></a>4.语句续行</h5><p>​       不知道这个细节在实际情况下能不能用的到，不过还是学习一下。</p>
+<p>​       通常，python一条语句就是一行，但在遇到较长的一条语句时，可以考虑换行，但不改变原意。可以有两种方法，一个是 \ ,还有一个是括号 () 。还是举个例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="number">50</span></span><br><span class="line"><span class="keyword">if</span> x&lt;<span class="number">100</span>\</span><br><span class="line">    <span class="keyword">and</span> x&gt;<span class="number">10</span>:</span><br><span class="line">    print(<span class="string">&quot;The value is legal&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&quot;The value is not legal&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p> 在上面的代码中，将if x&lt;100 and x&gt;10 使用 \ 从中间分开并换了一行，但并没有改变原意。</p>
+<p>​      还有一个换行方法是使用括号：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="number">50</span></span><br><span class="line"><span class="keyword">if</span> (x&lt;<span class="number">100</span></span><br><span class="line">        <span class="keyword">and</span> x&gt;<span class="number">10</span>):</span><br><span class="line">    print(<span class="string">&quot;The value is legal&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&quot;The value is not legal&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>不过值得提醒的是，不只是（），其他的用花括号 {} ，方括号 [] 也是被python允许的。把上面的（）改成{}也是可以的：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="number">50</span></span><br><span class="line"><span class="keyword">if</span> &#123;x&lt;<span class="number">100</span></span><br><span class="line">        <span class="keyword">and</span> x&gt;<span class="number">10</span>&#125;:</span><br><span class="line">    print(<span class="string">&quot;The value is legal&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&quot;The value is not legal&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h5 id="5-语句分隔"><a href="#5-语句分隔" class="headerlink" title="5.语句分隔"></a>5.语句分隔</h5><p>前面讲怎么把一行的代码拆开，现在讨论怎么把不是一行的代码写在一行。用分号   ;  。</p>
+<p>例如前面的样例可以用分号合成一行：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x=<span class="number">50</span></span><br><span class="line"><span class="keyword">if</span> x&lt;<span class="number">100</span> <span class="keyword">and</span> x&gt;<span class="number">10</span>: print(<span class="string">&quot;The value is legal&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>: print(<span class="string">&quot;The value is not legal&quot;</span>);print(<span class="string">&quot;please input again&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h5 id="6-关键字大小写"><a href="#6-关键字大小写" class="headerlink" title="6.关键字大小写"></a>6.关键字大小写</h5><p>python是区分大小写的，这点C++等其他语言是一样的。例如 ABC 和 aBC 就是两个不同的量。</p>
+<h4 id="二-基本输入输出"><a href="#二-基本输入输出" class="headerlink" title="二.基本输入输出"></a>二.基本输入输出</h4><h5 id="1-基本输入"><a href="#1-基本输入" class="headerlink" title="1.基本输入"></a>1.基本输入</h5><p>input函数用于获得用户输入的数据，基本格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">变量&#x3D;input(&quot;提示输入&quot;)</span><br></pre></td></tr></table></figure>
+<p>按Enter键确认输入。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="built_in">input</span>(<span class="string">&quot;enter a number&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>再按下Enter之前的所有内容都会被当作字符被输入。如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;a=<span class="built_in">input</span>(<span class="string">&quot;enter data&quot;</span>)</span><br><span class="line"><span class="number">123</span> abc <span class="number">456</span> xyz</span><br><span class="line">&gt;&gt;&gt;a</span><br><span class="line"><span class="number">123</span> abc <span class="number">456</span> xyz</span><br></pre></td></tr></table></figure>
+<p>由于默认情况下python对输入的内容都会当作字符串处理，所以就需要进行数据转换。例如，将输入的数据的转换为整数再进行计算：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="built_in">input</span>(<span class="string">&quot;please enter a number:&quot;</span>)</span><br><span class="line">print(a+<span class="number">1</span>)    <span class="comment">#如果执行该行则会报错，此时a是字符串，1是数字，不能相加</span></span><br><span class="line">print(<span class="built_in">int</span>(a)+<span class="number">1</span>)  <span class="comment">#此时则会得到正确的结果</span></span><br></pre></td></tr></table></figure>
+<h5 id="2-基本输出"><a href="#2-基本输出" class="headerlink" title="2.基本输出"></a>2.基本输出</h5><p>前面已经简单的提到过了，继续深入一下。python3.x中print函数的基本格式为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print([obj1,...][sep&#x3D;&#39;&#39;][end&#x3D;&#39;\n&#39;][file&#x3D;sys.stdout])</span><br></pre></td></tr></table></figure>
+<p>这一大串我自己也迷糊着，不知到啥东西，还是具体点看看例子。</p>
+<p>​      当print函数中没有任何参数时，就会输出一个空行:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print()</span><br></pre></td></tr></table></figure>
+<p>​      print函数可以一次输出多个对象，默认情况下都会当作字符串处理：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="number">123</span>,<span class="string">&#x27;vf&#x27;</span>,<span class="number">42</span>,<span class="string">&#x27;abc&#x27;</span>,<span class="number">44</span>)</span><br></pre></td></tr></table></figure>
+<p>注意非数字一定要加单引号。其输出结果会是123 vf 42 abc 44，默认用空格隔开，当然我们也可以指定符号作为分隔符，示用关键字sep：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="number">123</span>,<span class="string">&#x27;vf&#x27;</span>,<span class="number">42</span>,<span class="string">&#x27;abc&#x27;</span>,<span class="number">44</span>,sep=<span class="string">&#x27;#&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>输出结果就会变为123#vf#42#abc#44，使用#作为分隔符。</p>
+<p>​       最后介绍的一个是输出到文件，在C++中我们使用freopen()函数输出到文件。在python中，print函数默认输出到标准输出流（即sys.stdout）,可用file参数指定输出到特定文件。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">file1=<span class="built_in">open</span>(<span class="string">&#x27;1.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">print(<span class="number">123</span>,<span class="string">&#x27;ggg&#x27;</span>,<span class="string">&#x27;jjjj&#x27;</span>,<span class="number">89</span>,file=file1)</span><br><span class="line">file1.close()</span><br></pre></td></tr></table></figure>
+<p>​       此时会在和.py同一文件目录下创建一个1.txt文件，并将print函数内的内容写入txt文件。不过这仅仅介绍了如何写入，但是书上并没有写如何从文件中读取数据，明天上网查询资料继续学习。</p>
+<h4 id="三-数据类型"><a href="#三-数据类型" class="headerlink" title="三.数据类型"></a>三.数据类型</h4><p>​       python包含的数据类型包括：</p>
+<p>​                          int（整形，无小数点的数）</p>
+<p>​                          float（浮点数，带小数点的数）</p>
+<p>​                          复数</p>
+<p>​                          固定精度的十进制数，分数等</p>
+<h5 id="1-数字常量"><a href="#1-数字常量" class="headerlink" title="1.数字常量"></a>1.数字常量</h5><p>​     数字常量即不带小数点的数，如123，-345，0，等，在python3.x中，只要计算机内存足够大，整数理论上就可以无穷大。例如，我们可以直接用python计算2的100次方：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="number">2</span>**<span class="number">100</span></span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+<p>​     这是python的一个方便之处，如果用C++，那我们就必须得写一个高精度算法了（<del>我都忘了好久了</del>）。</p>
+<p>之前提到过在输入情况下python默认都会将输入内容当作字符串处理，所以在对数据进行处理是有必要进行一下转化，可以使用int函数，基本格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int(&#39;整数字符串&#39;，n)</span><br></pre></td></tr></table></figure>
+<p>简单解释一下，“整数字符串”是输入的数字，n是将整数字符串按n进制转换成整数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="built_in">int</span>(<span class="string">&#x27;111&#x27;</span>)               <span class="comment">#默认按十进制转化</span></span><br><span class="line"><span class="number">111</span></span><br><span class="line">&gt;&gt;&gt;<span class="built_in">int</span>(<span class="string">&#x27;111&#x27;</span>,<span class="number">2</span>)             <span class="comment">#按二进制转化</span></span><br><span class="line"><span class="number">7</span></span><br><span class="line">&gt;&gt;&gt;<span class="built_in">int</span>(<span class="string">&#x27;111&#x27;</span>,<span class="number">8</span>)             <span class="comment">#按八进制转换</span></span><br><span class="line"><span class="number">73</span></span><br><span class="line">&gt;&gt;<span class="built_in">int</span>(<span class="string">&#x27;111&#x27;</span>,<span class="number">16</span>)             <span class="comment">#按十六进制转换</span></span><br><span class="line"><span class="number">273</span></span><br><span class="line">&gt;&gt;&gt;<span class="built_in">int</span>(<span class="string">&#x27;111&#x27;</span>,<span class="number">5</span>)             <span class="comment">#按五进制转化</span></span><br><span class="line"><span class="number">31</span></span><br></pre></td></tr></table></figure>
+<p>以上是交互模式下编写python，在编辑器内，可以这么写：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=<span class="built_in">input</span>(<span class="string">&quot;enter number:&quot;</span>)</span><br><span class="line">a=<span class="built_in">int</span>(a,<span class="number">2</span>)</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+<p>注意：int函数的第一个参数只能是整数字符串。</p>
+<p>同时 ，python内置了函数bin(x),oct(x)和hex(x)将整数转化为对应的进制数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;<span class="built_in">bin</span>(<span class="number">50</span>)                  <span class="comment">#转换为二进制字符串</span></span><br><span class="line"><span class="string">&#x27;0b110010&#x27;</span></span><br><span class="line">&gt;&gt;&gt;<span class="built_in">oct</span>(<span class="number">50</span>)                  <span class="comment">#转换为八进制字符串</span></span><br><span class="line"><span class="string">&#x27;0o62&#x27;</span></span><br><span class="line">&gt;&gt;&gt;<span class="built_in">hex</span>(<span class="number">50</span>)                  <span class="comment">#转换为十六进制字符串</span></span><br><span class="line"><span class="string">&#x27;0x32&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>其他的数据类型用法与之类似，不做过多介绍。</p>
+<h5 id="2-数字运算"><a href="#2-数字运算" class="headerlink" title="2.数字运算"></a>2.数字运算</h5><p>在此整理了python的常见运算符：</p>
+<table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">+</td>
+<td align="center">加号</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">减号</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td align="center">乘号</td>
+</tr>
+<tr>
+<td align="center">/</td>
+<td align="center">除号（保留余数）</td>
+</tr>
+<tr>
+<td align="center">%</td>
+<td align="center">求模，即保留余数</td>
+</tr>
+<tr>
+<td align="center">**</td>
+<td align="center">幂运算</td>
+</tr>
+<tr>
+<td align="center">//</td>
+<td align="center">除号（不保留余数）</td>
+</tr>
+</tbody></table>
+<h5 id="3-数学函数"><a href="#3-数学函数" class="headerlink" title="3.数学函数"></a>3.数学函数</h5><p>python内置用于数字处理的内置函数和内置模块：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">abs</span>(-<span class="number">4</span>)           <span class="comment">#求绝对值</span></span><br><span class="line"><span class="built_in">bin</span>(<span class="number">4</span>)            <span class="comment">#将整数转换位二进制字符串</span></span><br><span class="line"><span class="built_in">hex</span>(<span class="number">4</span>)            <span class="comment">#返回整数的16进制字符串</span></span><br><span class="line"><span class="built_in">oct</span>(<span class="number">4</span>)            <span class="comment">#返回整数的八进制字符串</span></span><br><span class="line"><span class="built_in">chr</span>(<span class="number">65</span>)           <span class="comment">#返回整数对应的ASCLL码字符</span></span><br><span class="line"><span class="built_in">ord</span>(<span class="string">&#x27;A&#x27;</span>)          <span class="comment">#返回ASCLL码对应的整数</span></span><br><span class="line"><span class="built_in">divmod</span>(<span class="number">9</span>,<span class="number">4</span>)       <span class="comment">#返回商和余数</span></span><br><span class="line">x=<span class="number">10</span></span><br><span class="line"><span class="built_in">eval</span>(<span class="string">&#x27;x*(x+1)&#x27;</span>)   <span class="comment">#返回字符串中表达式的值</span></span><br><span class="line"><span class="built_in">max</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)    <span class="comment">#返回最大值</span></span><br><span class="line"><span class="built_in">min</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)    <span class="comment">#返回最小值</span></span><br><span class="line"><span class="built_in">pow</span>(<span class="number">2</span>,<span class="number">3</span>)          <span class="comment">#2的3次方，效果类似于2**3</span></span><br><span class="line"><span class="built_in">sum</span>(&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;)    <span class="comment">#求和</span></span><br></pre></td></tr></table></figure>
+<h5 id="4-math模块函数"><a href="#4-math模块函数" class="headerlink" title="4.math模块函数"></a>4.math模块函数</h5><p>python中内置了大量数学函数，使用前需要先导入math模块，即：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br></pre></td></tr></table></figure>
+<p>下面具体介绍：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line">math.pi                  <span class="comment">#数字常量π</span></span><br><span class="line">math.e                   <span class="comment">#数字常量e</span></span><br><span class="line">math.inf                 <span class="comment">#浮点数的正无穷大，-math.inf表示负无穷大</span></span><br><span class="line">math.ceil(<span class="number">2.3</span>)           <span class="comment">#返回不小于2.3的最小整数</span></span><br><span class="line">math.fabs(-<span class="number">5</span>)            <span class="comment">#返回-5的绝对值</span></span><br><span class="line">math.factorial(<span class="number">5</span>)        <span class="comment">#返回5的阶乘</span></span><br><span class="line">math.floor(<span class="number">2.3</span>)          <span class="comment">#返回不大于2.3的最大整数</span></span><br><span class="line">math.fmod(<span class="number">9</span>,<span class="number">4</span>)           <span class="comment">#返回9除以4的余数</span></span><br><span class="line">x=[<span class="number">0.1</span>,<span class="number">0.1</span>,<span class="number">0.1</span>,<span class="number">0.1</span>,<span class="number">0.1</span>,<span class="number">0.1</span>,<span class="number">0.1</span>,<span class="number">0.1</span>,<span class="number">0.1</span>,<span class="number">0.1</span>]</span><br><span class="line">math.fsum(x)             <span class="comment">#求和（比sum函数更加精确）</span></span><br><span class="line">math.gcd(<span class="number">12</span>,<span class="number">9</span>)           <span class="comment">#求最大公约数</span></span><br><span class="line">math.trunc(<span class="number">12.456</span>)       <span class="comment">#返回数字的整数部分</span></span><br><span class="line">math.exp(<span class="number">2</span>)              <span class="comment">#返回e的2次方</span></span><br><span class="line">math.expm1(<span class="number">2</span>)            <span class="comment">#返回e的2次方减1</span></span><br></pre></td></tr></table></figure>
+<h5 id="5-集合"><a href="#5-集合" class="headerlink" title="5.集合"></a>5.集合</h5><p>   集合（set）是python2.4中引入的一种新类型。集合常量与字典类似，用花括号表示，如{1，2，3}。集合中的元素是唯一，无序和不可变的。集合支持数学理论中各种集合运算。</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li>本文标题：python基础学习</li>
+        <li>本文作者：starkxun</li>
+        <li>创建时间：2021-02-22 17:53:32</li>
+        <li>
+            本文链接：https://keep.xpoet.cn/2021/02/22/python基础/
+        </li>
+        <li>
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2021/02/22/pycharm%E5%AE%89%E8%A3%85gmpy2/"
+                        >
+                            <span class="left arrow-icon flex-center" >
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">pycharm安装gmpy2</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2021/02/22/stegsolve%E7%9A%84%E4%BD%BF%E7%94%A8/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">Stegsolve的使用</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center" >
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+            <div class="comment-container">
+                <div class="comments-container">
+    <div id="comment-anchor"></div>
+    
+        
+    <div class="valine-container">
+        <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+        <div id="vcomments"></div>
+        <script>
+            new Valine({
+                el: '#vcomments',
+                appId: 'jpKUeuyo7pSVaHLw7Jf9YVsO-gzGzoHsz',
+                appKey: 'NQNBMAvso3J9VIAiz0Xawtc1',
+                meta: ''.split(','),
+                avatar: 'wavatar',
+                enableQQ: true,
+                placeholder: '',
+                lang: 'zh-CN'.toLowerCase()
+            });
+
+
+            // Valine 评论列表增加"博主"标识
+            const getValineDomTimer = setInterval(() => {
+                const vcards = document.querySelectorAll('#vcomments .vcards .vcard');
+                if (vcards.length > 0) {
+
+                    let author = 'starkxun';
+                    if (author) {
+                        author = author.toLocaleLowerCase();
+                    }
+
+                    for (let vcard of vcards) {
+                        const vnick = vcard.querySelector('.vhead .vnick');
+                        if (vnick.innerHTML.toLocaleLowerCase() === author) {
+                            vcard.classList.add('author');
+                        }
+                    }
+                    clearInterval(getValineDomTimer);
+                } else {
+                    clearInterval(getValineDomTimer);
+                }
+            }, 2000);
+        </script>
+    </div>
+
+
+    
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                    
+                </main>
+
+            </div>
+
+            <div class="page-main-content-bottom">
+                <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2020</span> -
+            
+            2021 <i class="fas fa-heart icon-animate"></i> <a href="/">starkxun</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动 | 主题 <a class="theme-version" target="_blank"></a>
+        </div>
+    </div>
+</footer>
+
+            </div>
+        </div>
+    </main>
+
+    <div class="sidebar-tools">
+        <div class="tools-container">
+    <ul class="tools-list">
+        
+            <li class="search popup-trigger">
+                <i class="fas fa-search"></i>
+            </li>
+        
+
+        
+            <li class="go-comment">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+    </ul>
+</div>
+
+    </div>
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center" href="/atom.xml" target="_blank"><i class="fas fa-rss"></i></a>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-top flex-center">
+            <i class="fas fa-arrow-up"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="tools-ul-1">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+    </ul>
+</div>
+
+    </div>
+
+    <!-- page aside -->
+    <aside class="page-aside">
+        
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%80-python%E7%A8%8B%E5%BA%8F%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">一.python程序基本结构：</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%9F%BA%E6%9C%AC%E8%BE%93%E5%87%BA"><span class="nav-number">1.1.</span> <span class="nav-text">1.基本输出</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E7%BC%A9%E8%BF%9B"><span class="nav-number">1.2.</span> <span class="nav-text">2.缩进</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E6%B3%A8%E9%87%8A"><span class="nav-number">1.3.</span> <span class="nav-text">3.注释</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-%E8%AF%AD%E5%8F%A5%E7%BB%AD%E8%A1%8C"><span class="nav-number">1.4.</span> <span class="nav-text">4.语句续行</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-%E8%AF%AD%E5%8F%A5%E5%88%86%E9%9A%94"><span class="nav-number">1.5.</span> <span class="nav-text">5.语句分隔</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-%E5%85%B3%E9%94%AE%E5%AD%97%E5%A4%A7%E5%B0%8F%E5%86%99"><span class="nav-number">1.6.</span> <span class="nav-text">6.关键字大小写</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8C-%E5%9F%BA%E6%9C%AC%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="nav-number">2.</span> <span class="nav-text">二.基本输入输出</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E5%9F%BA%E6%9C%AC%E8%BE%93%E5%85%A5"><span class="nav-number">2.1.</span> <span class="nav-text">1.基本输入</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E5%9F%BA%E6%9C%AC%E8%BE%93%E5%87%BA"><span class="nav-number">2.2.</span> <span class="nav-text">2.基本输出</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%89-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">三.数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E6%95%B0%E5%AD%97%E5%B8%B8%E9%87%8F"><span class="nav-number">3.1.</span> <span class="nav-text">1.数字常量</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%95%B0%E5%AD%97%E8%BF%90%E7%AE%97"><span class="nav-number">3.2.</span> <span class="nav-text">2.数字运算</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-%E6%95%B0%E5%AD%A6%E5%87%BD%E6%95%B0"><span class="nav-number">3.3.</span> <span class="nav-text">3.数学函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-math%E6%A8%A1%E5%9D%97%E5%87%BD%E6%95%B0"><span class="nav-number">3.4.</span> <span class="nav-text">4.math模块函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-%E9%9B%86%E5%90%88"><span class="nav-number">3.5.</span> <span class="nav-text">5.集合</span></a></li></ol></li></ol>
+    </div>
+</div>
+        
+    </aside>
+
+    <!-- image viewer -->
+    <div class="image-viewer-container">
+    <div class="img-box">
+        <img src="">
+    </div>
+</div>
+
+
+</div>
+
+
+
+    <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-icon">
+            <i class="fas fa-search"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/dark-light-toggle.js"></script>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/local-search.js"></script>
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/left-side-toggle.js"></script>
+
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/code-copy.js"></script>
+    
+
+    
+        <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/libs/anime.min.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.0.4/source/js/toc.js"></script>
+    
+
+
+</body>
+</html>
